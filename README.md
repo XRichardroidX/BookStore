@@ -71,4 +71,4 @@ All source code files are licensed under the permissive zlib license
 (http://opensource.org/licenses/Zlib) unless marked differently in a particular folder/file.
 
 ## Author
-- **Alexander Oguzie-Ibeh** - [github](https://github.com/XRichardroidX), [linkedin](https://www.linkedin.com/in/richard-oguzie-ibeh-b4a975231), [twitter](https://twitter.com/RichardroiDX)
+- **Richard O.I** - [github](https://github.com/XRichardroidX), [linkedin](https://www.linkedin.com/in/richard-oguzie-ibeh-b4a975231), [twitter](https://twitter.com/RichardroiDX)
