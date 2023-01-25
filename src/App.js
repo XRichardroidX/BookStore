@@ -1,14 +1,14 @@
 import { Route, Routes } from 'react-router-dom';
-import Home from './pages/Home';
-import Categories from './pages/CategoriesPage';
-import Navigation from './components/Header';
+import Books from './pages/Books';
+import Categories from './pages/Categories';
+import Navigation from './components/Navigation';
 
 function App() {
   return (
     <>
       <Navigation />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Books />} />
         <Route path="/categories" element={<Categories />} />
       </Routes>
     </>

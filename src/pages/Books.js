@@ -2,11 +2,11 @@ import React from 'react';
 import Book from '../components/Book';
 import Form from '../components/Form';
 
-const Home = () => (
+const Books = () => (
   <>
-    <Book title=" Oliver Twist" author="Charles Dickens" />
+    <Book title="Dracula" author="Arthur Conan Doyle" />
     <Form />
   </>
 );
 
-export default Home;
+export default Books;
