@@ -1,74 +1,187 @@
-# BookStore | REX
+<a name="readme-top"></a>
 
-> "BookStore" is a web app for adding and removing books from a library storage. It is a Single Page App (SPA) that allows users to add and remove a book
+<div align="center">
+  <h3><b>Bookstore React App</b></h1>
+</div>
 
-Our goal here is to Build a single page web application for book weebs using the React library
+# 📗 Table of Contents
 
-<!-- 
-## Live Demo
-Click [here](#) to view live demo
- -->
-### Features implemented so far are:
+- [📗 Table of Contents](#-table-of-contents)
+- [Book store 📖 ](#book-store--)
+  - [🛠 Built With ](#-built-with-)
+    - [Tech Stack ](#tech-stack-)
+  - [🚀 Live Demo ](#-live-demo-)
+  - [💻 Getting Started ](#-getting-started-)
+    - [Prerequisites](#prerequisites)
+- [Setup:](#setup)
+- [Install:](#install)
+    - [Install this project with:](#install-this-project-with)
+- [Usage](#usage)
+    - [To run the project, execute the following command:](#to-run-the-project-execute-the-following-command)
+- [Run tests:](#run-tests)
+    - [To run tests, run the following command:](#to-run-tests-run-the-following-command)
+    - [Deployment](#deployment)
+  - [👥 Authors ](#-authors-)
+  - [🤝 Contributing ](#-contributing-)
+  - [⭐️ Show your support ](#️-show-your-support-)
+  - [🔭 Future Features ](#-future-features-)
+- [📝 License:](#-license)
 
-- Project Setup with React Installations
-- Redux to handle state management
-- Connected to an API endpoint to save and fetch books
+<!-- PROJECT DESCRIPTION -->
 
-## Built With
+# Book store 📖 <a name="about-project"></a>
 
-- React (A free and open-source front-end JavaScript library for building user interfaces based on UI components)
-- React Testing Library
-- React Router v6
-- Redux
-- React MUI font icons
-- Stylelint (A mighty, modern linter that helps you avoid errors and enforce conventions in your styles).
-- ESlint (A mighty, modern linter that helps you avoid errors and enforce conventions in JavaScript codes)
 
-To get a local copy up and running follow these simple example steps.
+<b>React Bookstore</b> is a website for Mathematics lovers. The website is built with React JS.
+
+## 🛠 Built With <a name="built-with"></a>
+
+### Tech Stack <a name="tech-stack"></a>
+
+
+<details>
+  <summary>Client</summary>
+  <ul>
+    <li><a href="https://reactjs.org/">React.js</a></li>
+  </ul>
+</details>
+
+
+## 🚀 Live Demo <a name="live-demo"></a>
+
+
+- [Live Demo Link](#)
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+<!-- GETTING STARTED -->
+
+## 💻 Getting Started <a name="getting-started"></a>
+
+
+To get a local copy up and running, follow these steps.
 
 ### Prerequisites
 
-The basic requirements for building the executable are:
+In order to run this project you need:
+- [x] A web browser like Google Chrome.
+- [x] A code editor like Visual Studio Code with Git and Node.js.
 
-- A working browser application (Google chrome, Mozilla Fire fox, Microsoft edge ...)
-- VSCode or any other equivalent code editor
-- Node Package Manager (For installing packages like Lighthous, webhint & stylelint used for checking for debugging bad codes before deployment)
-
-# Getting Started
-
-#### Cloning the project
-
+You can check if Git is installed by running the following command in the terminal.
 ```
-git clone  https://github.com/XRichardroidX/BookStore.git
+$ git --version
 ```
 
-## Getting packages and dependencies
-To get all package modules required to build the project run:
+Likewise for Node.js and npm for package installation.
 ```
-npm install
+$ node --version && npm --version
 ```
-every package module required to build the project is listed in the package.json file. this is used as a reference to get all dependencies.
 
-## Building 
+# Setup:
+- Clone this repository to your desired folder.
 
-To build the project run:
+# Install:
+### Install this project with:
+- Git.
+- Github.
+# Usage
+
+### To run the project, execute the following command:
+
+  ```sh 
+  git clone https://github.com/Salwa99/Bookstore.git
+  ```
+  ```sh 
+  cd math-magician
+  ```
+  ```sh 
+  npm install
+  ```
+  ```sh 
+  npm start
+  ```
+
+**You may also see any lint errors in the console.**
+
+
+
+# Run tests:
+
+  ```sh 
+  npm install react-test-renderer --save-dev
+  ```
+  ```sh 
+  npm install --save-dev @testing-library/react
+  ```
+  ```sh 
+  npm run test
+  ```
+### To run tests, run the following command:
+  ```sh 
+  npx eslint .
+  ```
+   ```sh 
+  npx stylelint "**/*.{css,scss}
+  ```
+
+
+
+### Deployment
+
+You can deploy this project using:
+
 ```
-npm run build
+$ npm run deploy
 ```
-after you run this sucessfully you'd locate the build from in the ```build``` folder located from the parent directory of the project.
 
-## Running
 
-To run the program on a browser through a server run this command in your cli
-```
-npm start
-```
-This should open the page in your localhost on port 3000. then you'd be able to view the built page generated using webpack.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
 
-## License
+<!-- AUTHORS -->
 
-All source code files are licensed under the permissive zlib license
-(http://opensource.org/licenses/Zlib) unless marked differently in a particular folder/file.
+## 👥 Authors <a name="authors"></a>
 
-## Author
-- **Alexander Oguzie-Ibeh** - [github](https://github.com/XRichardroidX), [linkedin](https://www.linkedin.com/in/richard-oguzie-ibeh-b4a975231), [twitter](https://twitter.com/RichardroiDX)
+
+👤 **Salwa Ballouti**
+
+- GitHub: [@Salwa99](https://github.com/Salwa99)
+- Twitter: [@SalwaBallouti](https://twitter.com/salwa-ballouti)
+- LinkedIn: [Salwa Ballouti](https://linkedin.com/in/salwa-ballouti)
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+
+
+## 🤝 Contributing <a name="contributing"></a>
+
+Contributions, issues, and feature requests are welcome!
+
+Feel free to check the [issues page](../../issues/).
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+
+
+## ⭐️ Show your support <a name="support"></a>
+
+
+
+Give a ⭐️ if you like this project!
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+## 🔭 Future Features <a name="future-features"></a>
+
+- [ ]  Use Redux in React components.
+- [ ]  Connect to an API.
+- [ ]  Styling the App.
+
+
+<p align="right">(<a href="#readme-top">back to top</a>)</p>
+
+# 📝 License:
+This project is [MIT](./LICENSE) licensed.
+<p align="right">(<a href="#readme-top">back to top</a>)</p>

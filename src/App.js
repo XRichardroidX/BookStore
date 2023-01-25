@@ -1,31 +1,19 @@
-import React, { Component } from 'react';
-import {
-  BrowserRouter as Router, Routes, Route,
-} from 'react-router-dom';
-import './App.css';
-import BooksContainer from './components/Books/BooksContainer';
-import Categories from './components/Categories/Categories';
-import Navbar from './components/Navbar/Navbar';
+import { Route, Routes } from 'react-router-dom';
+import Home from './pages/Home';
+import Categories from './pages/CategoriesPage';
+import Navigation from './components/Header';
 
-class App extends Component {
-  constructor(props) {
-    super(props);
-    this.state = {};
-  }
+function App() {
+  return (
+    <>
+      <Navigation />
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/categories" element={<Categories />} />
+      </Routes>
+    </>
 
-  render() {
-    return (
-      <>
-        <Router basename={process.env.PUBLIC_URL}>
-          <Navbar />
-          <Routes>
-            <Route path="/" element={(<BooksContainer />)} />
-            <Route path="/Categories" element={(<Categories />)} />
-          </Routes>
-        </Router>
-      </>
-    );
-  }
+  );
 }
 
 export default App;
