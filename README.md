@@ -92,7 +92,7 @@ $ node --version && npm --version
   git clone https://github.com/XRichardroidX/BookStore.git
   ```
   ```sh 
-  cd math-magician
+  cd BookStore
   ```
   ```sh 
   npm install
