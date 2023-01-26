@@ -1,26 +1,12 @@
-const CHECKED_STATUS = 'bookstore/categories/CHECKED_STATUS';
-const INITIAL_STATE = {
-  categories: [],
-  isChecking: false,
-  message: '',
-};
+const STATUS = 'bookstore/categories/STATUS';
 
-const checkStatus = () => ({
-  type: CHECKED_STATUS,
-});
-
-const categoryReducer = (state = INITIAL_STATE, action) => {
+export default (state = [], action) => {
   switch (action.type) {
-    case CHECKED_STATUS:
-      return {
-        ...state,
-        isChecking: true,
-        message: 'Under construction',
-      };
+    case STATUS:
+      return 'under construction';
     default:
       return state;
   }
 };
 
-export { checkStatus };
-export default categoryReducer;
+export const checkStatusAction = () => ({ type: STATUS });
