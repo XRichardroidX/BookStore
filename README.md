@@ -50,7 +50,7 @@
 ## 🚀 Live Demo <a name="live-demo"></a>
 
 
-- [Live Demo Link](#)
+- [Live Demo Link](https://github.com/XRichardroidX/BookStore/src)
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
@@ -165,15 +165,6 @@ Feel free to check the [issues page](https://github.com/XRichardroidX/BookStore/
 
 
 Give a ⭐️ if you like this project!
-
-<p align="right">(<a href="#readme-top">back to top</a>)</p>
-
-## 🔭 Future Features <a name="future-features"></a>
-
-- [ ]  Use Redux in React components.
-- [ ]  Connect to an API.
-- [ ]  Styling the App.
-
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
