@@ -1,28 +1,63 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import React from 'react';
-import PropTypes from 'prop-types';
+import propsType from 'prop-types';
 import { useDispatch } from 'react-redux';
-import { removeBook } from '../redux/books/books';
+import { removeBookAction } from '../redux/books/books';
 
-const Book = ({
-  id, title, author, genre,
-}) => {
+const Book = (props) => {
+  const { book } = props;
+  const {
+    item_id: itemId,
+    title,
+    author,
+    category,
+  } = book;
+
   const dispatch = useDispatch();
 
-  const handleRemove = () => {
-    dispatch(removeBook(id));
+  const removeBook = () => {
+    dispatch(removeBookAction(itemId));
   };
 
+  const percentage = Math.floor(Math.random() * (100 - (0)) + (0));
+
   return (
-    <div>
-      <div>
-        <h4>{genre}</h4>
-        <h3>{title}</h3>
-        <p>{author}</p>
-        <div>
-          <button type="submit">Comments</button>
-          <button type="submit" onClick={handleRemove}>Remove</button>
-          <button type="submit">Edit</button>
+    <div className="card w-full bg-white text-black">
+      <div className="details-container">
+        <span className="book-category">{category}</span>
+        <h2 className="book-title">{title}</h2>
+        <h3 className="theme-height text-sm text-blue font-roboto-slab font-light">{author}</h3>
+        <div className="actions">
+          <button type="button" onClick={() => {}} className="btn-link">
+            Comments
+          </button>
+          <span className="v-line" />
+          <button type="button" onClick={removeBook} className="btn-link">
+            Remove
+          </button>
+          <span className="v-line" />
+          <button type="button" onClick={() => {}} className="btn-link">
+            Edit
+          </button>
+        </div>
+      </div>
+      <div className="card-left-container">
+        <div className="progress-bar">
+          <div className="circular-progress" />
+          <div>
+            <h3>{`${percentage}%`}</h3>
+            <p>Completed</p>
+          </div>
+        </div>
+        <div style={{
+          borderLeft: '2px solid #e8e8e8', width: '2px', height: '50%', alignSelf: 'center',
+        }}
+        />
+        <div className="progess-details">
+          <div>
+            <p className="current-chapter-label">CURRENT CHAPTER</p>
+            <p className="current-chapter-name">{`Chapter ${(percentage > 30) ? Math.floor(percentage / 2) : percentage}`}</p>
+          </div>
+          <button className="primary-button" type="button">UPDATE PROGRESS</button>
+
         </div>
       </div>
     </div>
@@ -30,10 +65,12 @@ const Book = ({
 };
 
 Book.propTypes = {
-  title: PropTypes.string.isRequired,
-  author: PropTypes.string.isRequired,
-  genre: PropTypes.string.isRequired,
-  id: PropTypes.string.isRequired,
+  book: propsType.shape({
+    item_id: propsType.string.isRequired,
+    title: propsType.string.isRequired,
+    author: propsType.string.isRequired,
+    category: propsType.string.isRequired,
+  }).isRequired,
 };
 
 export default Book;

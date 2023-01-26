@@ -1,44 +1,42 @@
-/* eslint-disable import/no-extraneous-dependencies */
-import { v4 } from 'uuid';
+import { createAsyncThunk } from '@reduxjs/toolkit';
+import axios from '../../services/axios';
 
-const ADD = 'bookstore/books/ADD';
-const REMOVE = 'bookstore/books/REMOVE';
+const LIST_BOOKS = 'bookstore/books/LIST_BOOKS';
+const ADD_BOOK = 'bookstore/books/ADD_BOOK';
+const REMOVE_BOOK = 'bookstore/books/REMOVE_BOOK';
 
-// Actions
-const addBook = (book) => ({
-  type: ADD,
-  book,
-});
-
-const removeBook = (id) => ({
-  type: REMOVE,
-  id,
-});
-
-// Reducer
-const bookReducer = (state = [
-  {
-    id: v4(), title: 'Oliver Twist', author: 'Charles Dikens', genre: 'sc-fi',
-  },
-  {
-    id: v4(), title: 'The World as Will and Representation', author: 'Arthur Schopenhauer', genre: 'philosophy',
-  },
-  {
-    id: v4(), title: 'Thus Spoke Zarathustra', author: 'Friedrich Nietzsche', genre: 'philosophy',
-  },
-  {
-    id: v4(), title: 'Les Misérables', author: 'Victor Hugo', genre: 'historical fiction',
-  },
-], action = {}) => {
+export default (state = [], action) => {
   switch (action.type) {
-    case ADD:
-      return [...state, action.book];
-    case REMOVE:
-      return [...state.filter((book) => book.id !== action.id)];
+    case `${LIST_BOOKS}/fulfilled`:
+      return action.payload;
+
+    case `${ADD_BOOK}/fulfilled`:
+      return [...state, action.payload];
+
+    case `${REMOVE_BOOK}/fulfilled`:
+      return [...state.filter((book) => book.item_id.toString()
+        !== action.payload.toString())];
+
     default:
       return state;
   }
 };
 
-export { addBook, removeBook };
-export default bookReducer;
+export const getBooksAction = createAsyncThunk(LIST_BOOKS, async () => {
+  const response = await axios.get('books');
+  const data = Object.keys(response.data).map((book) => ({
+    item_id: book,
+    ...response.data[book][0],
+  }));
+  return data;
+});
+
+export const addBookAction = createAsyncThunk(ADD_BOOK, async (book) => {
+  await axios.post('books', book);
+  return book;
+});
+
+export const removeBookAction = createAsyncThunk(REMOVE_BOOK, async (bookId) => {
+  await axios.delete(`books/${bookId}`);
+  return bookId;
+});
